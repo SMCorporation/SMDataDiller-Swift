@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SMSectionObjectProtocol {
-    var itemsCount: Int { get }
-    func itemForRow(row: Int) -> Any
-    func rowForItem(item: Any) -> Int
+    var itemsCount: UInt { get }
+    func itemForRow(row: UInt) -> Any
+    func rowForItem(item: Any) -> UInt
 }

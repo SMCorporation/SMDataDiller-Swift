@@ -20,25 +20,25 @@ class SMBaseDataProvider<T> {
         // there is place for logic of re creating items
     }
     
-    func numberOfSections() -> Int {
+    func numberOfSections() -> UInt {
         if hasSection() {
-            return items.count
+            return UInt(items.count)
         }
         return items.isEmpty ? 0 : 1
     }
     
-    func numberOfItems(in section: Int) -> Int {
+    func numberOfItems(in section: UInt) -> UInt {
         if hasSection() {
             if items.count <= section {
-                return NSNotFound
+                return UInt(NSNotFound)
             }
             
-            let sectionObject = items[section]
+            let sectionObject = items[Int(section)]
             if isSectionObject(object: sectionObject) {
                 return (sectionObject as! SMSectionObjectProtocol).itemsCount
             }
         }
-        return items.count
+        return UInt(items.count)
     }
     
     func item(at indexPath: IndexPath) -> T? {
@@ -49,7 +49,7 @@ class SMBaseDataProvider<T> {
             
             let item = items[indexPath.section]
             if isSectionObject(object: item) {
-                return (item as! SMSectionObjectProtocol).itemForRow(row: indexPath.row) as? T
+                return (item as! SMSectionObjectProtocol).itemForRow(row: UInt(indexPath.row)) as? T
             }
             
             return (item as! Array<T>)[indexPath.row]
@@ -59,10 +59,19 @@ class SMBaseDataProvider<T> {
     }
     
     func indexPath(of item: T) -> IndexPath? {
-        var indexPath = IndexPath
+        var itemIndexPath = indexPathForItem(item: item, inItems: items, withSetionIndex: 0)
+        if hasSection() {
+            for index in 0..<items.count {
+                let sectionItems = items[index]
+                let indexPath = indexPathForItem(item: item, inItems: items, withSetionIndex: UInt(index))
+                if indexPath != nil {
+                    itemIndexPath = indexPath
+                    break
+                }
+            }
+        }
         
-        
-        return indexPath
+        return itemIndexPath
     }
 }
 
@@ -83,7 +92,22 @@ private extension SMBaseDataProvider {
         return object as? SMSectionObjectProtocol != nil
     }
     
-    func indexPathOfItem(item: T) -> IndexPath {
-        
+    func indexPathForItem(item: T, inItems items: T, withSetionIndex sectionIndex: UInt) -> IndexPath? {
+        if let items = items as? Array<T> {
+            for index in 0..<items.count {
+                let sectionItem = items[index]
+                if sectionItem == item {
+                    return IndexPath(row: index, section: Int(sectionIndex))
+                }
+            }
+        } else if isSectionObject(object: items) {
+            let sectionObject: SMSectionObjectProtocol = items as! SMSectionObjectProtocol
+            let itemIndex = sectionObject.rowForItem(item: item)
+            if itemIndex != NSNotFound {
+                return IndexPath(row: Int(itemIndex), section: Int(sectionIndex))
+            }
+        }
+        return nil
     }
 }
+
