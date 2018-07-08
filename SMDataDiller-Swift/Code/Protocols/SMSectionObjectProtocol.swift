@@ -9,7 +9,9 @@
 import Foundation
 
 protocol SMSectionObjectProtocol {
+    associatedtype DataPrviderItem
+    
     var itemsCount: UInt { get }
-    func itemForRow(row: UInt) -> Any
-    func rowForItem(item: Any) -> UInt
+    func itemForRow<DataPrviderItem>(row: UInt) -> DataPrviderItem
+    func rowForItem<DataPrviderItem>(item: DataPrviderItem) -> UInt
 }

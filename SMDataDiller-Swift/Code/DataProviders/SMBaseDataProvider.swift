@@ -7,10 +7,9 @@
 //
 import Foundation
 
-class SMBaseDataProvider<T> {
+class SMBaseDataProvider<DataPrviderItem: Equatable> {
     
-    var items = [T]()
-    var sectionItems = [UInt]()
+    var items = [DataPrviderItem]()
     
     init() {
         // there is place for any initial configurations of your dataProvider
@@ -41,7 +40,7 @@ class SMBaseDataProvider<T> {
         return UInt(items.count)
     }
     
-    func item(at indexPath: IndexPath) -> T? {
+    func item(at indexPath: IndexPath) -> DataPrviderItem? {
         if hasSection() {
             if items.count <= indexPath.section {
                 return nil
@@ -49,21 +48,21 @@ class SMBaseDataProvider<T> {
             
             let item = items[indexPath.section]
             if isSectionObject(object: item) {
-                return (item as! SMSectionObjectProtocol).itemForRow(row: UInt(indexPath.row)) as? T
+                return (item as! SMSectionObjectProtocol).itemForRow(row: UInt(indexPath.row)) as? DataPrviderItem
             }
             
-            return (item as! Array<T>)[indexPath.row]
+            return (item as! Array<DataPrviderItem>)[indexPath.row]
         }
         
         return items.isEmpty ? nil : items[indexPath.row]
     }
     
-    func indexPath(of item: T) -> IndexPath? {
+    func indexPath(of item: DataPrviderItem) -> IndexPath? {
         var itemIndexPath = indexPathForItem(item: item, inItems: items, withSetionIndex: 0)
         if hasSection() {
             for index in 0..<items.count {
                 let sectionItems = items[index]
-                let indexPath = indexPathForItem(item: item, inItems: items, withSetionIndex: UInt(index))
+                let indexPath = indexPathForItem(item: item, inItems: sectionItems, withSetionIndex: UInt(index))
                 if indexPath != nil {
                     itemIndexPath = indexPath
                     break
@@ -81,26 +80,25 @@ private extension SMBaseDataProvider {
     func hasSection() -> Bool {
         if !items.isEmpty {
             let item = items.first
-            if item is Array<Any> || isSectionObject(object: item) {
+            if item is Array<DataPrviderItem> || isSectionObject(object: item) {
                 return true
             }
         }
         return false
     }
     
-    func isSectionObject(object: T?) -> Bool {
+    func isSectionObject(object: DataPrviderItem?) -> Bool {
         return object as? SMSectionObjectProtocol != nil
     }
     
-    func indexPathForItem(item: T, inItems items: T, withSetionIndex sectionIndex: UInt) -> IndexPath? {
-        if let items = items as? Array<T> {
+    func indexPathForItem(item: DataPrviderItem, inItems items: Any, withSetionIndex sectionIndex: UInt) -> IndexPath? {
+        if let items = items as? Array<DataPrviderItem> {
             for index in 0..<items.count {
-                let sectionItem = items[index]
-                if sectionItem == item {
+                if items[index] as DPItem == item {
                     return IndexPath(row: index, section: Int(sectionIndex))
                 }
             }
-        } else if isSectionObject(object: items) {
+        } else if isSectionObject(object: items as? DataPrviderItem) {
             let sectionObject: SMSectionObjectProtocol = items as! SMSectionObjectProtocol
             let itemIndex = sectionObject.rowForItem(item: item)
             if itemIndex != NSNotFound {
