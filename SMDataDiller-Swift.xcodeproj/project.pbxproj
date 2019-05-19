@@ -19,6 +19,11 @@
 		5022077420BC72510065EE01 /* SMBaseCoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022077220BC72510065EE01 /* SMBaseCoreDataProvider.swift */; };
 		5022077620BC725E0065EE01 /* SMBaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022077520BC725E0065EE01 /* SMBaseDataSource.swift */; };
 		5022077720BC725E0065EE01 /* SMBaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022077520BC725E0065EE01 /* SMBaseDataSource.swift */; };
+		509CA24E20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA24D20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift */; };
+		509CA24F20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA24D20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift */; };
+		509CA25120E2B89100C8DF11 /* SMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA25020E2B89100C8DF11 /* SMCell.swift */; };
+		509CA25220E2B89100C8DF11 /* SMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA25020E2B89100C8DF11 /* SMCell.swift */; };
+		50EBCFC720E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EBCFC620E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,9 @@
 		5022076F20BC72400065EE01 /* SMBaseDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseDataProvider.swift; sourceTree = "<group>"; };
 		5022077220BC72510065EE01 /* SMBaseCoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseCoreDataProvider.swift; sourceTree = "<group>"; };
 		5022077520BC725E0065EE01 /* SMBaseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseDataSource.swift; sourceTree = "<group>"; };
+		509CA24D20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseDataSourceDelegate.swift; sourceTree = "<group>"; };
+		509CA25020E2B89100C8DF11 /* SMCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMCell.swift; sourceTree = "<group>"; };
+		50EBCFC620E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseDataSourceDelegate_Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 			children = (
 				5022076120BC70400065EE01 /* SMDataDiller_SwiftTests.swift */,
 				5022076320BC70400065EE01 /* Info.plist */,
+				50EBCFC620E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift */,
 			);
 			path = "SMDataDiller-SwiftTests";
 			sourceTree = "<group>";
@@ -109,6 +118,7 @@
 		5022076C20BC722F0065EE01 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				509CA24B20E2B86600C8DF11 /* Protocols */,
 				5022076D20BC722F0065EE01 /* DataSources */,
 				5022076E20BC722F0065EE01 /* DataProviders */,
 			);
@@ -130,6 +140,15 @@
 				5022077220BC72510065EE01 /* SMBaseCoreDataProvider.swift */,
 			);
 			path = DataProviders;
+			sourceTree = "<group>";
+		};
+		509CA24B20E2B86600C8DF11 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				509CA24D20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift */,
+				509CA25020E2B89100C8DF11 /* SMCell.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +252,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509CA24E20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift in Sources */,
 				5022077320BC72510065EE01 /* SMBaseCoreDataProvider.swift in Sources */,
 				5022077620BC725E0065EE01 /* SMBaseDataSource.swift in Sources */,
+				509CA25120E2B89100C8DF11 /* SMCell.swift in Sources */,
 				5022074F20BC703D0065EE01 /* ViewController.swift in Sources */,
 				5022074D20BC703D0065EE01 /* AppDelegate.swift in Sources */,
 				5022077020BC72400065EE01 /* SMBaseDataProvider.swift in Sources */,
@@ -246,9 +267,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5022077420BC72510065EE01 /* SMBaseCoreDataProvider.swift in Sources */,
+				509CA25220E2B89100C8DF11 /* SMCell.swift in Sources */,
+				509CA24F20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift in Sources */,
 				5022076220BC70400065EE01 /* SMDataDiller_SwiftTests.swift in Sources */,
 				5022077120BC72400065EE01 /* SMBaseDataProvider.swift in Sources */,
 				5022077720BC725E0065EE01 /* SMBaseDataSource.swift in Sources */,
+				50EBCFC720E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,19 +1,19 @@
 //
-//  SMDataDiller_SwiftTests.swift
+//  SMBaseDataSourceDelegate_Tests.swift
 //  SMDataDiller-SwiftTests
 //
-//  Created by Max on 28.05.2018.
+//  Created by Max on 26.06.2018.
 //  Copyright © 2018 molfar.io. All rights reserved.
 //
 
 import XCTest
-@testable import SMDataDiller_Swift
 
-class SMDataDiller_SwiftTests: XCTestCase {
+class SMBaseDataSourceDelegate_Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        SMBaseDataSource(dataProvider: <#T##_#>)
+        let dataSource = SMBaseDataSource()
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
