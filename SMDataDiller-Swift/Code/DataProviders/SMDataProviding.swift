@@ -38,21 +38,10 @@ public extension SMDataProviding {
     }
 
     subscript(index: Int) -> Item {
-        return items[index]
+        return item(at: IndexPath(row: index, section: 0))
     }
 
     subscript(indexPath: IndexPath) -> Item {
-        return items[indexPath.row]
-    }
-}
-
-public extension SMDataProviding where Item: Comparable {
-
-    func indexPath(of item: Item) -> IndexPath? {
-        guard let index = items.firstIndex(of: item) else {
-            return nil
-        }
-
-        return IndexPath(row: index, section: 0)
+        return item(at: indexPath)
     }
 }

@@ -9,18 +9,20 @@
 /* Begin PBXBuildFile section */
 		5022074D20BC703D0065EE01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022074C20BC703D0065EE01 /* AppDelegate.swift */; };
 		5022074F20BC703D0065EE01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022074E20BC703D0065EE01 /* ViewController.swift */; };
-		5022075220BC703D0065EE01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5022075020BC703D0065EE01 /* Main.storyboard */; };
 		5022075420BC70400065EE01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5022075320BC70400065EE01 /* Assets.xcassets */; };
-		5022075720BC70400065EE01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5022075520BC70400065EE01 /* LaunchScreen.storyboard */; };
-		5022076220BC70400065EE01 /* SMDataDiller_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022076120BC70400065EE01 /* SMDataDiller_SwiftTests.swift */; };
 		503FC3132291FF400029FB9A /* SMDataSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503FC3122291FF400029FB9A /* SMDataSourcing.swift */; };
 		504E88BB22DB63E800BB4B48 /* SMDataProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88BA22DB63E800BB4B48 /* SMDataProviding.swift */; };
 		504E88BD22DB67B800BB4B48 /* SMTableViewDataSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88BC22DB67B800BB4B48 /* SMTableViewDataSourcing.swift */; };
-		509CA24E20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA24D20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift */; };
-		509CA24F20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA24D20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift */; };
+		504E88C122DB6FAB00BB4B48 /* SMDataProviderBaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88C022DB6FAB00BB4B48 /* SMDataProviderBaseSpec.swift */; };
+		504E88C322DB712E00BB4B48 /* SMDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88C222DB712E00BB4B48 /* SMDataProvider.swift */; };
+		504E88C522DB7A2E00BB4B48 /* SMDataProviderSectionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88C422DB7A2E00BB4B48 /* SMDataProviderSectionsSpec.swift */; };
+		504E88C822DB7C2500BB4B48 /* IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88C722DB7C2500BB4B48 /* IndexPath.swift */; };
+		504E88CA22DB7F5200BB4B48 /* SMArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88C922DB7F5200BB4B48 /* SMArray.swift */; };
+		504E88CC22DB924B00BB4B48 /* SMDataProviding+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88CB22DB924B00BB4B48 /* SMDataProviding+Array.swift */; };
+		504E88CE22DB9AFA00BB4B48 /* SMDataProviding+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88CD22DB9AFA00BB4B48 /* SMDataProviding+Comparable.swift */; };
+		509CA24E20E2B87C00C8DF11 /* SMDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA24D20E2B87C00C8DF11 /* SMDataSourceDelegate.swift */; };
 		509CA25120E2B89100C8DF11 /* SMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA25020E2B89100C8DF11 /* SMCell.swift */; };
 		509CA25220E2B89100C8DF11 /* SMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA25020E2B89100C8DF11 /* SMCell.swift */; };
-		50EBCFC720E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EBCFC620E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift */; };
 		516B85B34F056BF7B9DF20AD /* Pods_SMDataDiller_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F99838ABF1C72915080034A /* Pods_SMDataDiller_SwiftTests.framework */; };
 		C8BC8EBD6B2E1DBF3930BD1A /* Pods_SMDataDiller_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 675B1029FF6B934CB2774679 /* Pods_SMDataDiller_Swift.framework */; };
 /* End PBXBuildFile section */
@@ -41,19 +43,22 @@
 		5022074920BC703D0065EE01 /* SMDataDiller-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMDataDiller-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5022074C20BC703D0065EE01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5022074E20BC703D0065EE01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5022075120BC703D0065EE01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5022075320BC70400065EE01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5022075620BC70400065EE01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5022075820BC70400065EE01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5022075D20BC70400065EE01 /* SMDataDiller-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SMDataDiller-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5022076120BC70400065EE01 /* SMDataDiller_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDataDiller_SwiftTests.swift; sourceTree = "<group>"; };
 		5022076320BC70400065EE01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503FC3122291FF400029FB9A /* SMDataSourcing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDataSourcing.swift; sourceTree = "<group>"; };
 		504E88BA22DB63E800BB4B48 /* SMDataProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDataProviding.swift; sourceTree = "<group>"; };
 		504E88BC22DB67B800BB4B48 /* SMTableViewDataSourcing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMTableViewDataSourcing.swift; sourceTree = "<group>"; };
-		509CA24D20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseDataSourceDelegate.swift; sourceTree = "<group>"; };
+		504E88C022DB6FAB00BB4B48 /* SMDataProviderBaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDataProviderBaseSpec.swift; sourceTree = "<group>"; };
+		504E88C222DB712E00BB4B48 /* SMDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDataProvider.swift; sourceTree = "<group>"; };
+		504E88C422DB7A2E00BB4B48 /* SMDataProviderSectionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDataProviderSectionsSpec.swift; sourceTree = "<group>"; };
+		504E88C722DB7C2500BB4B48 /* IndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPath.swift; sourceTree = "<group>"; };
+		504E88C922DB7F5200BB4B48 /* SMArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMArray.swift; sourceTree = "<group>"; };
+		504E88CB22DB924B00BB4B48 /* SMDataProviding+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SMDataProviding+Array.swift"; sourceTree = "<group>"; };
+		504E88CD22DB9AFA00BB4B48 /* SMDataProviding+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SMDataProviding+Comparable.swift"; sourceTree = "<group>"; };
+		509CA24D20E2B87C00C8DF11 /* SMDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDataSourceDelegate.swift; sourceTree = "<group>"; };
 		509CA25020E2B89100C8DF11 /* SMCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMCell.swift; sourceTree = "<group>"; };
-		50EBCFC620E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseDataSourceDelegate_Tests.swift; sourceTree = "<group>"; };
 		675B1029FF6B934CB2774679 /* Pods_SMDataDiller_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMDataDiller_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3E2C8C026593285314398D /* Pods-SMDataDiller-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMDataDiller-SwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-SMDataDiller-SwiftTests/Pods-SMDataDiller-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A17A58BF266F2C5CC357C4D /* Pods-SMDataDiller-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMDataDiller-Swift.debug.xcconfig"; path = "Target Support Files/Pods-SMDataDiller-Swift/Pods-SMDataDiller-Swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,9 +111,7 @@
 				5022076C20BC722F0065EE01 /* Code */,
 				5022074C20BC703D0065EE01 /* AppDelegate.swift */,
 				5022074E20BC703D0065EE01 /* ViewController.swift */,
-				5022075020BC703D0065EE01 /* Main.storyboard */,
 				5022075320BC70400065EE01 /* Assets.xcassets */,
-				5022075520BC70400065EE01 /* LaunchScreen.storyboard */,
 				5022075820BC70400065EE01 /* Info.plist */,
 			);
 			path = "SMDataDiller-Swift";
@@ -117,9 +120,9 @@
 		5022076020BC70400065EE01 /* SMDataDiller-SwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				5022076120BC70400065EE01 /* SMDataDiller_SwiftTests.swift */,
+				504E88BF22DB6E9300BB4B48 /* DataProviders */,
+				504E88BE22DB6E8B00BB4B48 /* DataSources */,
 				5022076320BC70400065EE01 /* Info.plist */,
-				50EBCFC620E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift */,
 			);
 			path = "SMDataDiller-SwiftTests";
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 		5022076C20BC722F0065EE01 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				504E88C622DB7C1300BB4B48 /* Extensions */,
 				509CA24B20E2B86600C8DF11 /* Protocols */,
 				5022076D20BC722F0065EE01 /* DataSources */,
 				5022076E20BC722F0065EE01 /* DataProviders */,
@@ -147,15 +151,43 @@
 			isa = PBXGroup;
 			children = (
 				504E88BA22DB63E800BB4B48 /* SMDataProviding.swift */,
+				504E88CB22DB924B00BB4B48 /* SMDataProviding+Array.swift */,
+				504E88CD22DB9AFA00BB4B48 /* SMDataProviding+Comparable.swift */,
 			);
 			path = DataProviders;
+			sourceTree = "<group>";
+		};
+		504E88BE22DB6E8B00BB4B48 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		504E88BF22DB6E9300BB4B48 /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				504E88C222DB712E00BB4B48 /* SMDataProvider.swift */,
+				504E88C022DB6FAB00BB4B48 /* SMDataProviderBaseSpec.swift */,
+				504E88C422DB7A2E00BB4B48 /* SMDataProviderSectionsSpec.swift */,
+			);
+			path = DataProviders;
+			sourceTree = "<group>";
+		};
+		504E88C622DB7C1300BB4B48 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				504E88C722DB7C2500BB4B48 /* IndexPath.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		509CA24B20E2B86600C8DF11 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				509CA24D20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift */,
+				509CA24D20E2B87C00C8DF11 /* SMDataSourceDelegate.swift */,
 				509CA25020E2B89100C8DF11 /* SMCell.swift */,
+				504E88C922DB7F5200BB4B48 /* SMArray.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -177,7 +209,6 @@
 				6E3E2C8C026593285314398D /* Pods-SMDataDiller-SwiftTests.debug.xcconfig */,
 				A351FA11944558D956D92DF8 /* Pods-SMDataDiller-SwiftTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -265,9 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5022075720BC70400065EE01 /* LaunchScreen.storyboard in Resources */,
 				5022075420BC70400065EE01 /* Assets.xcassets in Resources */,
-				5022075220BC703D0065EE01 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,12 +386,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				504E88BB22DB63E800BB4B48 /* SMDataProviding.swift in Sources */,
-				509CA24E20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift in Sources */,
+				509CA24E20E2B87C00C8DF11 /* SMDataSourceDelegate.swift in Sources */,
 				503FC3132291FF400029FB9A /* SMDataSourcing.swift in Sources */,
 				509CA25120E2B89100C8DF11 /* SMCell.swift in Sources */,
+				504E88CC22DB924B00BB4B48 /* SMDataProviding+Array.swift in Sources */,
 				5022074F20BC703D0065EE01 /* ViewController.swift in Sources */,
 				504E88BD22DB67B800BB4B48 /* SMTableViewDataSourcing.swift in Sources */,
+				504E88CA22DB7F5200BB4B48 /* SMArray.swift in Sources */,
 				5022074D20BC703D0065EE01 /* AppDelegate.swift in Sources */,
+				504E88C822DB7C2500BB4B48 /* IndexPath.swift in Sources */,
+				504E88CE22DB9AFA00BB4B48 /* SMDataProviding+Comparable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,10 +403,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504E88C322DB712E00BB4B48 /* SMDataProvider.swift in Sources */,
+				504E88C122DB6FAB00BB4B48 /* SMDataProviderBaseSpec.swift in Sources */,
+				504E88C522DB7A2E00BB4B48 /* SMDataProviderSectionsSpec.swift in Sources */,
 				509CA25220E2B89100C8DF11 /* SMCell.swift in Sources */,
-				509CA24F20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift in Sources */,
-				5022076220BC70400065EE01 /* SMDataDiller_SwiftTests.swift in Sources */,
-				50EBCFC720E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,25 +419,6 @@
 			targetProxy = 5022075E20BC70400065EE01 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5022075020BC703D0065EE01 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5022075120BC703D0065EE01 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5022075520BC70400065EE01 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5022075620BC70400065EE01 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5022076420BC70400065EE01 /* Debug */ = {
