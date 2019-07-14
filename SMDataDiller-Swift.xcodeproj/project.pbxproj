@@ -21,6 +21,8 @@
 		509CA25120E2B89100C8DF11 /* SMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA25020E2B89100C8DF11 /* SMCell.swift */; };
 		509CA25220E2B89100C8DF11 /* SMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA25020E2B89100C8DF11 /* SMCell.swift */; };
 		50EBCFC720E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EBCFC620E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift */; };
+		516B85B34F056BF7B9DF20AD /* Pods_SMDataDiller_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F99838ABF1C72915080034A /* Pods_SMDataDiller_SwiftTests.framework */; };
+		C8BC8EBD6B2E1DBF3930BD1A /* Pods_SMDataDiller_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 675B1029FF6B934CB2774679 /* Pods_SMDataDiller_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A805805DE84BC2CA07E09A1 /* Pods-SMDataDiller-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMDataDiller-Swift.release.xcconfig"; path = "Target Support Files/Pods-SMDataDiller-Swift/Pods-SMDataDiller-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		2F99838ABF1C72915080034A /* Pods_SMDataDiller_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMDataDiller_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5022074920BC703D0065EE01 /* SMDataDiller-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMDataDiller-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5022074C20BC703D0065EE01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5022074E20BC703D0065EE01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +54,10 @@
 		509CA24D20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseDataSourceDelegate.swift; sourceTree = "<group>"; };
 		509CA25020E2B89100C8DF11 /* SMCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMCell.swift; sourceTree = "<group>"; };
 		50EBCFC620E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseDataSourceDelegate_Tests.swift; sourceTree = "<group>"; };
+		675B1029FF6B934CB2774679 /* Pods_SMDataDiller_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMDataDiller_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3E2C8C026593285314398D /* Pods-SMDataDiller-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMDataDiller-SwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-SMDataDiller-SwiftTests/Pods-SMDataDiller-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A17A58BF266F2C5CC357C4D /* Pods-SMDataDiller-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMDataDiller-Swift.debug.xcconfig"; path = "Target Support Files/Pods-SMDataDiller-Swift/Pods-SMDataDiller-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		A351FA11944558D956D92DF8 /* Pods-SMDataDiller-SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMDataDiller-SwiftTests.release.xcconfig"; path = "Target Support Files/Pods-SMDataDiller-SwiftTests/Pods-SMDataDiller-SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8BC8EBD6B2E1DBF3930BD1A /* Pods_SMDataDiller_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				516B85B34F056BF7B9DF20AD /* Pods_SMDataDiller_SwiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +86,8 @@
 				5022074B20BC703D0065EE01 /* SMDataDiller-Swift */,
 				5022076020BC70400065EE01 /* SMDataDiller-SwiftTests */,
 				5022074A20BC703D0065EE01 /* Products */,
+				E692C37BFBE34231D0C04A75 /* Pods */,
+				96057D1B3E2F8D72A85CDD30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +160,27 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		96057D1B3E2F8D72A85CDD30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				675B1029FF6B934CB2774679 /* Pods_SMDataDiller_Swift.framework */,
+				2F99838ABF1C72915080034A /* Pods_SMDataDiller_SwiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E692C37BFBE34231D0C04A75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A17A58BF266F2C5CC357C4D /* Pods-SMDataDiller-Swift.debug.xcconfig */,
+				0A805805DE84BC2CA07E09A1 /* Pods-SMDataDiller-Swift.release.xcconfig */,
+				6E3E2C8C026593285314398D /* Pods-SMDataDiller-SwiftTests.debug.xcconfig */,
+				A351FA11944558D956D92DF8 /* Pods-SMDataDiller-SwiftTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +188,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5022076620BC70400065EE01 /* Build configuration list for PBXNativeTarget "SMDataDiller-Swift" */;
 			buildPhases = (
+				DB87183226259F0A5EB9A6D0 /* [CP] Check Pods Manifest.lock */,
 				5022074520BC703D0065EE01 /* Sources */,
 				5022074620BC703D0065EE01 /* Frameworks */,
 				5022074720BC703D0065EE01 /* Resources */,
@@ -172,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5022076920BC70400065EE01 /* Build configuration list for PBXNativeTarget "SMDataDiller-SwiftTests" */;
 			buildPhases = (
+				F168407B86F67C9FC69C62A5 /* [CP] Check Pods Manifest.lock */,
 				5022075920BC70400065EE01 /* Sources */,
 				5022075A20BC70400065EE01 /* Frameworks */,
 				5022075B20BC70400065EE01 /* Resources */,
+				92D1E33BF02A2078C08C4472 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +279,77 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92D1E33BF02A2078C08C4472 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SMDataDiller-SwiftTests/Pods-SMDataDiller-SwiftTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SMDataDiller-SwiftTests/Pods-SMDataDiller-SwiftTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB87183226259F0A5EB9A6D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SMDataDiller-Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F168407B86F67C9FC69C62A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SMDataDiller-SwiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5022074520BC703D0065EE01 /* Sources */ = {
@@ -416,11 +523,13 @@
 		};
 		5022076720BC70400065EE01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A17A58BF266F2C5CC357C4D /* Pods-SMDataDiller-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XK5AEQZHJU;
 				INFOPLIST_FILE = "SMDataDiller-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,11 +543,13 @@
 		};
 		5022076820BC70400065EE01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A805805DE84BC2CA07E09A1 /* Pods-SMDataDiller-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XK5AEQZHJU;
 				INFOPLIST_FILE = "SMDataDiller-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,6 +563,7 @@
 		};
 		5022076A20BC70400065EE01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E3E2C8C026593285314398D /* Pods-SMDataDiller-SwiftTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +585,7 @@
 		};
 		5022076B20BC70400065EE01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A351FA11944558D956D92DF8 /* Pods-SMDataDiller-SwiftTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
