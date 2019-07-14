@@ -12,8 +12,6 @@ class SMBaseDataSourceDelegate_Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        let dataSource = SMBaseDataSource()
-        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     

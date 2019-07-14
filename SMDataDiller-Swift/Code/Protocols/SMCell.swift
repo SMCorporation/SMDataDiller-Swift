@@ -8,7 +8,9 @@
 
 import Foundation
 
-
 public protocol SMCell {
-    
+    associatedtype Item
+
+    func fill(from item: Item)
 }
+

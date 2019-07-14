@@ -13,12 +13,9 @@
 		5022075420BC70400065EE01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5022075320BC70400065EE01 /* Assets.xcassets */; };
 		5022075720BC70400065EE01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5022075520BC70400065EE01 /* LaunchScreen.storyboard */; };
 		5022076220BC70400065EE01 /* SMDataDiller_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022076120BC70400065EE01 /* SMDataDiller_SwiftTests.swift */; };
-		5022077020BC72400065EE01 /* SMBaseDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022076F20BC72400065EE01 /* SMBaseDataProvider.swift */; };
-		5022077120BC72400065EE01 /* SMBaseDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022076F20BC72400065EE01 /* SMBaseDataProvider.swift */; };
-		5022077320BC72510065EE01 /* SMBaseCoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022077220BC72510065EE01 /* SMBaseCoreDataProvider.swift */; };
-		5022077420BC72510065EE01 /* SMBaseCoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022077220BC72510065EE01 /* SMBaseCoreDataProvider.swift */; };
-		5022077620BC725E0065EE01 /* SMBaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022077520BC725E0065EE01 /* SMBaseDataSource.swift */; };
-		5022077720BC725E0065EE01 /* SMBaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022077520BC725E0065EE01 /* SMBaseDataSource.swift */; };
+		503FC3132291FF400029FB9A /* SMDataSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503FC3122291FF400029FB9A /* SMDataSourcing.swift */; };
+		504E88BB22DB63E800BB4B48 /* SMDataProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88BA22DB63E800BB4B48 /* SMDataProviding.swift */; };
+		504E88BD22DB67B800BB4B48 /* SMTableViewDataSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88BC22DB67B800BB4B48 /* SMTableViewDataSourcing.swift */; };
 		509CA24E20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA24D20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift */; };
 		509CA24F20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA24D20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift */; };
 		509CA25120E2B89100C8DF11 /* SMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA25020E2B89100C8DF11 /* SMCell.swift */; };
@@ -47,9 +44,9 @@
 		5022075D20BC70400065EE01 /* SMDataDiller-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SMDataDiller-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5022076120BC70400065EE01 /* SMDataDiller_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDataDiller_SwiftTests.swift; sourceTree = "<group>"; };
 		5022076320BC70400065EE01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5022076F20BC72400065EE01 /* SMBaseDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseDataProvider.swift; sourceTree = "<group>"; };
-		5022077220BC72510065EE01 /* SMBaseCoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseCoreDataProvider.swift; sourceTree = "<group>"; };
-		5022077520BC725E0065EE01 /* SMBaseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseDataSource.swift; sourceTree = "<group>"; };
+		503FC3122291FF400029FB9A /* SMDataSourcing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDataSourcing.swift; sourceTree = "<group>"; };
+		504E88BA22DB63E800BB4B48 /* SMDataProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDataProviding.swift; sourceTree = "<group>"; };
+		504E88BC22DB67B800BB4B48 /* SMTableViewDataSourcing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMTableViewDataSourcing.swift; sourceTree = "<group>"; };
 		509CA24D20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseDataSourceDelegate.swift; sourceTree = "<group>"; };
 		509CA25020E2B89100C8DF11 /* SMCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMCell.swift; sourceTree = "<group>"; };
 		50EBCFC620E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBaseDataSourceDelegate_Tests.swift; sourceTree = "<group>"; };
@@ -128,7 +125,8 @@
 		5022076D20BC722F0065EE01 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				5022077520BC725E0065EE01 /* SMBaseDataSource.swift */,
+				503FC3122291FF400029FB9A /* SMDataSourcing.swift */,
+				504E88BC22DB67B800BB4B48 /* SMTableViewDataSourcing.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -136,8 +134,7 @@
 		5022076E20BC722F0065EE01 /* DataProviders */ = {
 			isa = PBXGroup;
 			children = (
-				5022076F20BC72400065EE01 /* SMBaseDataProvider.swift */,
-				5022077220BC72510065EE01 /* SMBaseCoreDataProvider.swift */,
+				504E88BA22DB63E800BB4B48 /* SMDataProviding.swift */,
 			);
 			path = DataProviders;
 			sourceTree = "<group>";
@@ -252,13 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504E88BB22DB63E800BB4B48 /* SMDataProviding.swift in Sources */,
 				509CA24E20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift in Sources */,
-				5022077320BC72510065EE01 /* SMBaseCoreDataProvider.swift in Sources */,
-				5022077620BC725E0065EE01 /* SMBaseDataSource.swift in Sources */,
+				503FC3132291FF400029FB9A /* SMDataSourcing.swift in Sources */,
 				509CA25120E2B89100C8DF11 /* SMCell.swift in Sources */,
 				5022074F20BC703D0065EE01 /* ViewController.swift in Sources */,
+				504E88BD22DB67B800BB4B48 /* SMTableViewDataSourcing.swift in Sources */,
 				5022074D20BC703D0065EE01 /* AppDelegate.swift in Sources */,
-				5022077020BC72400065EE01 /* SMBaseDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,12 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5022077420BC72510065EE01 /* SMBaseCoreDataProvider.swift in Sources */,
 				509CA25220E2B89100C8DF11 /* SMCell.swift in Sources */,
 				509CA24F20E2B87C00C8DF11 /* SMBaseDataSourceDelegate.swift in Sources */,
 				5022076220BC70400065EE01 /* SMDataDiller_SwiftTests.swift in Sources */,
-				5022077120BC72400065EE01 /* SMBaseDataProvider.swift in Sources */,
-				5022077720BC725E0065EE01 /* SMBaseDataSource.swift in Sources */,
 				50EBCFC720E2DD1C0010FBB9 /* SMBaseDataSourceDelegate_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +427,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.molfar.SMDataDiller-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -451,7 +445,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.molfar.SMDataDiller-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

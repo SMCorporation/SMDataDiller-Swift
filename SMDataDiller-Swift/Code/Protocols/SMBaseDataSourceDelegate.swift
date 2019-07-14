@@ -8,19 +8,9 @@
 
 import Foundation
 
-//public protocol SMBaseDataSourceDelegate: class {
-//    func dataSource<ItemType: Equatable, DataProviderType: SMDataProvider, DataSourceType: SMBaseDataSource<DataProviderType>>(_ dataSource: DataSourceType, didSelectRowAt indexPath: IndexPath, with item: ItemType)
-//
-//    func dataSource<ItemType: Equatable, DataProviderType: SMDataProvider, DataSourceType: SMBaseDataSource<DataProviderType>>(_ dataSource: DataSourceType, didDeselectRowAt indexPath: IndexPath, with item: ItemType)
-//}
+public protocol SMDataSourceDelegate: AnyObject {
+    associatedtype DataSource: SMDataSourcing
 
-
-
-public protocol SMBaseDataSourceDelegate: class {
-//    associatedtype DataProviderType: SMDataProvider
-//    associatedtype DataSourceType
-    
-//    func dataSource<DataSourceType: SMBaseDataSource, ItemType: Equatable>(_ dataSource: DataSourceType, didSelectRowAt indexPath: IndexPath, with item: ItemType) where ItemType == DataProviderType.ItemType, DataSourceType.
-    
-//    func dataSource<ItemType: Equatable, DataProviderType: SMDataProvider, DataSourceType: SMBaseDataSource<DataProviderType>>(_ dataSource: DataSourceType, didDeselectRowAt indexPath: IndexPath, with item: ItemType)
+    func dataSource(_ dataSource: DataSource, didSelectRowAt indexPath: IndexPath, with item: DataSource.DataProvider.Item)
+    func dataSource(_ dataSource: DataSource, didDeselectRowAt indexPath: IndexPath, with item: DataSource.DataProvider.Item)
 }
