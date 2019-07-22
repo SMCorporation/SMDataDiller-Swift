@@ -14,7 +14,7 @@ public protocol SMDataProviding {
     var items: [Item] { get set }
     var numberOfSections: Int { get }
 
-    func reload(_ completion: (()->Void)?)
+    func reload(_ completion: SMReloadCompletion?)
     func item(at indexPath: IndexPath) -> Item
 
     func numberOfItemsIn(section: Int) -> Int
@@ -29,7 +29,7 @@ public extension SMDataProviding {
         return items.count
     }
 
-    func reload(_ completion: (() -> Void)?) {
+    func reload(_ completion: SMReloadCompletion?) {
         completion?()
     }
 

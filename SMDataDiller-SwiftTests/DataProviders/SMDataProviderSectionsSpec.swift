@@ -16,16 +16,26 @@ class SMDataProviderSectionsSpec: QuickSpec {
         let dataProvider = SMDataProvider<[String]>()
 
         beforeEach {
-            dataProvider.items = [["1"], ["2", "2"], ["3", "3", "3"]]
+            dataProvider.items = [["1"], ["2_1", "2_2"], ["3_1", "3_2", "3_3"]]
         }
 
         describe("Data provider") {
-            it("check items") {
+            it("get item at IndexPath") {
                 expect(dataProvider.numberOfSections) == 3
-//                expect(dataProvider.items.count) == 3
-//                expect(dataProvider[0]) == "1"
-//                expect(dataProvider.indexPath(of: "1")).notTo(beNil())
-//                expect(dataProvider.indexPath(of: "nil")).to(beNil())
+                expect(dataProvider.item(at: IndexPath(row: 1, section: 1))) == "2_2"
+                expect(dataProvider.item(at: IndexPath(row: 2, section: 2))) == "3_3"
+            }
+
+            it("get IndexPath of item") {
+                let indexPath3_3 = dataProvider.indexPath(of: "3_3")
+                expect(indexPath3_3).notTo(beNil())
+                expect(indexPath3_3?.row) == 2
+                expect(indexPath3_3?.section) == 2
+
+                let indexPath2_1 = dataProvider.indexPath(of: "2_1")
+                expect(indexPath2_1).notTo(beNil())
+                expect(indexPath2_1?.row) == 0
+                expect(indexPath2_1?.section) == 1
             }
         }
     }

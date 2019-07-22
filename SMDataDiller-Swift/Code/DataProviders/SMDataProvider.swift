@@ -7,7 +7,6 @@
 //
 
 import Foundation
-@testable import SMDataDiller_Swift
 
 class SMDataProvider<T>: SMDataProviding {
     typealias Item = T
