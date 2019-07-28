@@ -21,6 +21,8 @@
 		504E88CA22DB7F5200BB4B48 /* SMArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88C922DB7F5200BB4B48 /* SMArray.swift */; };
 		504E88CC22DB924B00BB4B48 /* SMDataProviding+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88CB22DB924B00BB4B48 /* SMDataProviding+Array.swift */; };
 		504E88CE22DB9AFA00BB4B48 /* SMDataProviding+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E88CD22DB9AFA00BB4B48 /* SMDataProviding+Comparable.swift */; };
+		509BCDC322EE086700C99385 /* SMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509BCDC222EE086700C99385 /* SMTableViewCell.swift */; };
+		509BCDC522EE08EB00C99385 /* SMCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509BCDC422EE08EB00C99385 /* SMCollectionViewCell.swift */; };
 		509CA24E20E2B87C00C8DF11 /* SMDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA24D20E2B87C00C8DF11 /* SMDataSourceDelegate.swift */; };
 		509CA25120E2B89100C8DF11 /* SMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA25020E2B89100C8DF11 /* SMCell.swift */; };
 		509CA25220E2B89100C8DF11 /* SMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CA25020E2B89100C8DF11 /* SMCell.swift */; };
@@ -60,6 +62,8 @@
 		504E88C922DB7F5200BB4B48 /* SMArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMArray.swift; sourceTree = "<group>"; };
 		504E88CB22DB924B00BB4B48 /* SMDataProviding+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SMDataProviding+Array.swift"; sourceTree = "<group>"; };
 		504E88CD22DB9AFA00BB4B48 /* SMDataProviding+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SMDataProviding+Comparable.swift"; sourceTree = "<group>"; };
+		509BCDC222EE086700C99385 /* SMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMTableViewCell.swift; sourceTree = "<group>"; };
+		509BCDC422EE08EB00C99385 /* SMCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMCollectionViewCell.swift; sourceTree = "<group>"; };
 		509CA24D20E2B87C00C8DF11 /* SMDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDataSourceDelegate.swift; sourceTree = "<group>"; };
 		509CA25020E2B89100C8DF11 /* SMCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMCell.swift; sourceTree = "<group>"; };
 		50F1437F22E65B77008941B6 /* SMDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDefines.swift; sourceTree = "<group>"; };
@@ -196,11 +200,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		509BCDC122EE085700C99385 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				509CA25020E2B89100C8DF11 /* SMCell.swift */,
+				509BCDC222EE086700C99385 /* SMTableViewCell.swift */,
+				509BCDC422EE08EB00C99385 /* SMCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		509CA24B20E2B86600C8DF11 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				509CA24D20E2B87C00C8DF11 /* SMDataSourceDelegate.swift */,
-				509CA25020E2B89100C8DF11 /* SMCell.swift */,
+				509BCDC122EE085700C99385 /* Cells */,
 				504E88C922DB7F5200BB4B48 /* SMArray.swift */,
 			);
 			path = Protocols;
@@ -409,7 +423,9 @@
 				5022074F20BC703D0065EE01 /* ViewController.swift in Sources */,
 				504E88BD22DB67B800BB4B48 /* SMTableViewDataSourcing.swift in Sources */,
 				504E88CA22DB7F5200BB4B48 /* SMArray.swift in Sources */,
+				509BCDC322EE086700C99385 /* SMTableViewCell.swift in Sources */,
 				502DB9AF22E6543A00DD38E0 /* SMTableViewDataSource.swift in Sources */,
+				509BCDC522EE08EB00C99385 /* SMCollectionViewCell.swift in Sources */,
 				5022074D20BC703D0065EE01 /* AppDelegate.swift in Sources */,
 				504E88C822DB7C2500BB4B48 /* IndexPath.swift in Sources */,
 				504E88CE22DB9AFA00BB4B48 /* SMDataProviding+Comparable.swift in Sources */,

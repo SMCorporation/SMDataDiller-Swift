@@ -12,9 +12,8 @@ public protocol SMTableViewDataSourcing: SMDataSourcing {
 
     var tableView: UITableView { get set }
 
-    func classForCell(at indexPath: IndexPath) -> UITableViewCell.Type
+    func classForCell<T: UITableViewCell>(at indexPath: IndexPath) -> T.Type
     func heightForRow(at indexPath: IndexPath) -> CGFloat
-
     func cellStyle(at indexPath: IndexPath) -> UITableViewCell.CellStyle
 
     func setup<T: UITableViewCell>(cell: T, at indexPath: IndexPath)
@@ -23,17 +22,18 @@ public protocol SMTableViewDataSourcing: SMDataSourcing {
 
 public extension SMTableViewDataSourcing {
 
-    func classForCell(at indexPath: IndexPath) -> UITableViewCell.Type {
-        return UITableViewCell.self
+    func classForCell<T: UITableViewCell>(at indexPath: IndexPath) -> T.Type {
+        return T.self
     }
 
     func cellReuseIdentifier(at indexPath: IndexPath) -> String {
         let cellClass = classForCell(at: indexPath)
-        return String(describing: cellClass)
+        let cellStyle = self.cellStyle(at: indexPath)
+        return String(describing: cellClass) + String(describing: cellStyle)
     }
 
     func heightForRow(at indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return classForCell(at: indexPath).height
     }
 
     func cellStyle(at indexPath: IndexPath) -> UITableViewCell.CellStyle {
@@ -48,8 +48,17 @@ public extension SMTableViewDataSourcing {
 
     }
 
-    func fill<T: UITableViewCell>(cell: T, at indexPath: IndexPath) where T: SMCell, DataProvider.Item == T.Item {
-        cell.fill(from: dataProvider.item(at: indexPath))
+    func fill<T: UITableViewCell>(cell: T, at indexPath: IndexPath) where T: SMCell {
+        if let item = dataProvider.item(at: indexPath) as? T.Item {
+            cell.fill(from: item)
+        }
+    }
+}
+
+extension SMTableViewDataSourcing {
+
+    func heightForRow<T>(from cellType: T.Type) -> CGFloat where T: SMTableViewCell {
+        return cellType.height
     }
 }
 
@@ -86,11 +95,22 @@ public extension UITableViewDataSource where Self: SMTableViewDataSourcing  {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) ?? {
             let cell = UITableViewCell(style: cellStyle, reuseIdentifier: reuseIdentifier)
-            self.setup(cell: cell, at: indexPath)
+            setup(cell: cell, at: indexPath)
             return cell
         }()
 
         fill(cell: cell, at: indexPath)
         return cell
+    }
+}
+
+// MARK: - Help Methods
+private extension SMTableViewDataSourcing {
+
+    func createCell(at indexPath: IndexPath, with reuseIdentifier: String) -> UITableViewCell {
+        let cellStyle = self.cellStyle(at: indexPath)
+        let cellClass = classForCell(at: indexPath)
+
+        return cellClass.init(style: cellStyle, reuseIdentifier: reuseIdentifier)
     }
 }

@@ -8,8 +8,8 @@
 
 import Foundation
 
-class SMDataProvider<T>: SMDataProviding {
-    typealias Item = T
+ open class SMDataProvider<T>: SMDataProviding {
+    public typealias Item = T
 
-    var items: [T] = []
+    public var items: [T] = []
 }
